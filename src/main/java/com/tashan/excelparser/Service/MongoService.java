@@ -14,7 +14,7 @@ public class MongoService {
     public String connectionMongo(){
 
         try{
-            MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://<otashan>:<alex10fb>@ds147995.mlab.com:47995/kampanyacekilis"));
+            MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://<otashan>:<123456>@ds147995.mlab.com:47995/kampanyacekilis"));
 
             String conn = "Successfully connection.";
             System.out.print(conn);
