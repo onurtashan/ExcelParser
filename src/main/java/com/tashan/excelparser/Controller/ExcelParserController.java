@@ -15,14 +15,17 @@ import java.io.IOException;
 public class ExcelParserController {
 
     @RequestMapping(value="/excelparser")
-    public ExcelParser excelParser(@RequestParam(value = "isParsed", defaultValue = "") int isParsed) throws IOException {
+    public ExcelParser excelParser(@RequestParam(value = "isParsed", defaultValue = "") int isParsed,
+                                   @RequestParam(value = "kampanyaNo", defaultValue = "") int kampanyaNo) throws IOException {
 
-        String siraNo = new ExcelParserService().parserResult(isParsed).getSiraNo();
-        String duzenleyen = new ExcelParserService().parserResult(isParsed).getDuzenleyen();
-        String kampanyaBslgncBts = new ExcelParserService().parserResult(isParsed).getKampanyaBslgncBts();
-        String cekilisTarihi = new ExcelParserService().parserResult(isParsed).getCekilisTarihi();
-        String ilanTarihi = new ExcelParserService().parserResult(isParsed).getIlanTarihi();
-        String gazete = new ExcelParserService().parserResult(isParsed).getGazete();
+        String siraNo = new ExcelParserService().parserResult(isParsed,kampanyaNo).getSiraNo();
+        String duzenleyen = new ExcelParserService().parserResult(isParsed, kampanyaNo).getDuzenleyen();
+        String kampanyaBslgncBts = new ExcelParserService().parserResult(isParsed, kampanyaNo).getKampanyaBslgncBts();
+        String cekilisTarihi = new ExcelParserService().parserResult(isParsed, kampanyaNo).getCekilisTarihi();
+        String ilanTarihi = new ExcelParserService().parserResult(isParsed, kampanyaNo).getIlanTarihi();
+        String gazete = new ExcelParserService().parserResult(isParsed, kampanyaNo).getGazete();
+
+
 
         return new ExcelParser(siraNo, duzenleyen,kampanyaBslgncBts,cekilisTarihi,ilanTarihi,gazete);
     }
