@@ -2,6 +2,7 @@ package com.tashan.excelparser.Controller;
 
 import com.tashan.excelparser.Model.ExcelParser;
 import com.tashan.excelparser.Service.ExcelParserService;
+import com.tashan.excelparser.Service.MongoService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +26,7 @@ public class ExcelParserController {
         String ilanTarihi = new ExcelParserService().parserResult(isParsed, kampanyaNo).getIlanTarihi();
         String gazete = new ExcelParserService().parserResult(isParsed, kampanyaNo).getGazete();
 
-
+        System.out.print(new MongoService().connectionMongo());
 
         return new ExcelParser(siraNo, duzenleyen,kampanyaBslgncBts,cekilisTarihi,ilanTarihi,gazete);
     }
