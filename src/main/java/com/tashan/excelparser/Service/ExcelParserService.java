@@ -17,7 +17,7 @@ public class ExcelParserService {
 
     public ExcelParser parserResult (int isParsed, int kampanyaNo) throws IOException {
 
-        FileInputStream excelFile = new FileInputStream(new File("C:\\Users\\tcotashan\\Desktop\\Cekilisler.xlsx"));
+        FileInputStream excelFile = new FileInputStream(new File("/Users/onurtashan/Downloads/Cekilisler.xlsx"));
         Workbook workbook = new XSSFWorkbook(excelFile);
         Sheet sheet = workbook.getSheetAt(0);
         Iterator<Row> iterator = sheet.iterator();
