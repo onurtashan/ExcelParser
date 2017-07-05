@@ -26,8 +26,6 @@ public class MongoController {
         String gazete = new ExcelParserService().parserResult(toSend, kampanyaNo).getGazete();
 
 
-        new MongoService().insertMongo(siraNo, duzenleyen, kampanyaBslgncBts, cekilisTarihi, ilanTarihi, gazete);
-
         String sonuc = new MongoService().insertMongo(siraNo, duzenleyen, kampanyaBslgncBts, cekilisTarihi, ilanTarihi, gazete);
 
         return new MongoSend(sonuc);
