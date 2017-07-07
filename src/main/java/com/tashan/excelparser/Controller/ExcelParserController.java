@@ -26,8 +26,6 @@ public class ExcelParserController {
         String ilanTarihi = new ExcelParserService().parserResult(isParsed, kampanyaNo).getIlanTarihi();
         String gazete = new ExcelParserService().parserResult(isParsed, kampanyaNo).getGazete();
 
-        System.out.print(new MongoService().connectionMongo());
-
         return new ExcelParser(siraNo, duzenleyen,kampanyaBslgncBts,cekilisTarihi,ilanTarihi,gazete);
     }
 }
