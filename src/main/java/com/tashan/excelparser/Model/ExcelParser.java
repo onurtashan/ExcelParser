@@ -4,43 +4,58 @@ package com.tashan.excelparser.Model;
  * Created by TCOTASHAN on 21.6.2017.
  */
 public class ExcelParser {
-    private String siraNo;
-    private String duzenleyen;
-    private String kampanyaBslgncBts;
-    private String cekilisTarihi;
-    private String ilanTarihi;
-    private String gazete;
+    private String baslik;
+    private String icerik;
+    private String baslangic_tarihi;
+    private String bitis_tarihi;
+    private String cekilis_tarihi;
+    private String imgURL;
 
-    public ExcelParser(String siraNo, String duzenleyen, String kampanyaBslgncBts, String cekilisTarihi, String ilanTarihi, String gazete){
-        this.siraNo = siraNo;
-        this.duzenleyen = duzenleyen;
-        this.kampanyaBslgncBts = kampanyaBslgncBts;
-        this.cekilisTarihi = cekilisTarihi;
-        this.ilanTarihi = ilanTarihi;
-        this.gazete = gazete;
+    public String getBaslik() {
+        return baslik;
     }
 
-    public String getSiraNo() {
-        return siraNo;
+    public String getIcerik() {
+        return icerik;
     }
 
-    public String getDuzenleyen() {
-        return duzenleyen;
+    public String getBaslangic_tarihi() {
+        return baslangic_tarihi;
     }
 
-    public String getKampanyaBslgncBts() {
-        return kampanyaBslgncBts;
+    public String getBitis_tarihi() {
+        return bitis_tarihi;
     }
 
-    public String getCekilisTarihi() {
-        return cekilisTarihi;
+    public String getCekilis_tarihi() {
+        return cekilis_tarihi;
     }
 
-    public String getIlanTarihi() {
-        return ilanTarihi;
+    public String getImgURL() {
+        return imgURL;
     }
 
-    public String getGazete() {
-        return gazete;
+    public void setBaslik(String baslik) {
+        this.baslik = baslik;
+    }
+
+    public void setIcerik(String icerik) {
+        this.icerik = icerik;
+    }
+
+    public void setBaslangic_tarihi(String baslangic_tarihi) {
+        this.baslangic_tarihi = baslangic_tarihi;
+    }
+
+    public void setBitis_tarihi(String bitis_tarihi) {
+        this.bitis_tarihi = bitis_tarihi;
+    }
+
+    public void setCekilis_tarihi(String cekilis_tarihi) {
+        this.cekilis_tarihi = cekilis_tarihi;
+    }
+
+    public void setImgURL(String imgURL) {
+        this.imgURL = imgURL;
     }
 }
